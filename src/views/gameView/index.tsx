@@ -15,7 +15,7 @@ import FakeAPI from "../../utils/FakeAPI.json";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { Image } from "../../components/basic/Img";
 import boom from "../../assets/boom 1.png";
-import demoQuestions from "../../demoQuestions/demoQuestions.js";
+import demoQuestions from "../../demoQuestions/demoQuestions";
 
 interface GameviewProps {
   handleMine: (
