@@ -27,10 +27,12 @@ interface GameviewProps {
 export const GameView = React.forwardRef<HTMLDivElement, GameviewProps>(
   ({ handleMine }, clipStickRef) => {
     const [searchParams] = useSearchParams();
-    const set = searchParams.get("set");
-    // const questionsData = demoQuestions[set] || FakeAPI;
-    console.log(demoQuestions[set])
-    const questionsList =  demoQuestions[set].data.questions || FakeAPI.data.questions; // Ensure fallback
+    const setParam = searchParams.get("set");
+    const setIndex = setParam !== null ? Number(setParam) : 1;
+    console.log(demoQuestions[setIndex]);
+    const questionsList =
+      demoQuestions[setIndex]?.data.questions || FakeAPI.data.questions;
+
     // console.log(questionsList)
     const navigate = useNavigate();
 
@@ -95,7 +97,10 @@ export const GameView = React.forwardRef<HTMLDivElement, GameviewProps>(
               <Image src={boom} />
             </div>
             <div className="non-boom flex items-center">
-              <p id="choice-0" className="choice-0 absolute animate-choice text-[0.8rem]">
+              <p
+                id="choice-0"
+                className="choice-0 absolute animate-choice text-[0.8rem]"
+              >
                 {questions[currentQuestionIndex]?.options[0] || ""}
               </p>
               <Mine5 className="h-[80px]" />
@@ -111,7 +116,10 @@ export const GameView = React.forwardRef<HTMLDivElement, GameviewProps>(
               <Image src={boom} />
             </div>
             <div className="non-boom flex items-center">
-              <p id="choice-1" className="choice-1 absolute animate-choice text-[0.8rem]">
+              <p
+                id="choice-1"
+                className="choice-1 absolute animate-choice text-[0.8rem]"
+              >
                 {questions[currentQuestionIndex]?.options[1] || ""}
               </p>
               <Mine2 className="h-[90px]" />
@@ -127,7 +135,10 @@ export const GameView = React.forwardRef<HTMLDivElement, GameviewProps>(
               <Image src={boom} />
             </div>
             <div className="non-boom flex items-center">
-              <p id="choice-2" className="choice-2 absolute animate-choice text-[0.8rem]">
+              <p
+                id="choice-2"
+                className="choice-2 absolute animate-choice text-[0.8rem]"
+              >
                 {questions[currentQuestionIndex]?.options[2] || ""}
               </p>
               <Mine1 className="h-[80px]" />
@@ -143,7 +154,10 @@ export const GameView = React.forwardRef<HTMLDivElement, GameviewProps>(
               <Image src={boom} />
             </div>
             <div className="non-boom flex items-center">
-              <p id="choice-3" className="choice-3 absolute animate-choice text-[0.8rem]">
+              <p
+                id="choice-3"
+                className="choice-3 absolute animate-choice text-[0.8rem]"
+              >
                 {questions[currentQuestionIndex]?.options[3] || ""}
               </p>
               <Mine4 className="h-[80px]" />
