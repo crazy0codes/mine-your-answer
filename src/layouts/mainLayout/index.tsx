@@ -1,10 +1,11 @@
 import { Outlet } from "react-router-dom";
+import background from "../../assets/iPhone 16 - 4.png";
 
 export const MainLayout = () => {
   return (
     <main
       style={{
-        backgroundImage: `URL('src/assets/iPhone 16 - 4.png')`,
+        backgroundImage: `URL(${background})`,
         backgroundSize: "contain",
         height: "100%",
         width: "400px",

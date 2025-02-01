@@ -1,6 +1,7 @@
 import React from "react";
 import { Image } from "../../basic/Img";
 import { Gameover } from "../gameover";
+import clip from "../../../assets/clip 1.svg";
 
 interface ClipProps {
   rotate?: string;
@@ -24,7 +25,7 @@ export const Clip = React.forwardRef<HTMLDivElement, ClipProps>(
             }}
           ></div>
           <Image
-            src="src\assets\clip 1.svg"
+            src={clip}
             className="clipHanger h-[60px] p-0"
           />
          <Gameover className="gameover hidden -translate-y-[90px]"/>
