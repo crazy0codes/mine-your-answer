@@ -12,9 +12,10 @@ import {
 import { Player } from "../../components/custom/player";
 import { PowerUpIcon } from "../../components/custom/powerupIcon";
 import FakeAPI from "../../utils/FakeAPI.json";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { Image } from "../../components/basic/Img";
 import boom from "../../assets/boom 1.png";
+import demoQuestions from "../../demoQuestions/demoQuestions.js";
 
 interface GameviewProps {
   handleMine: (
@@ -25,7 +26,12 @@ interface GameviewProps {
 
 export const GameView = React.forwardRef<HTMLDivElement, GameviewProps>(
   ({ handleMine }, clipStickRef) => {
-    const questionsList = FakeAPI.data.questions || []; // Ensure fallback
+    const [searchParams] = useSearchParams();
+    const set = searchParams.get("set");
+    // const questionsData = demoQuestions[set] || FakeAPI;
+    console.log(demoQuestions[set])
+    const questionsList =  demoQuestions[set].data.questions || FakeAPI.data.questions; // Ensure fallback
+    // console.log(questionsList)
     const navigate = useNavigate();
 
     const [isActivated, setIsActivated] = React.useState(false);

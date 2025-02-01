@@ -1,13 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import { StartView } from "../../views/startView";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 export const StartContainer: React.FC = () => {
   const afterEffects = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
-
+  const [searchParams] = useSearchParams();
+  const set = searchParams.get("set");
   function handleStart() {
-    navigate("/game");
+    navigate(`/game?set=${set}`);
   }
 
   useEffect(() => {
@@ -20,7 +21,7 @@ export const StartContainer: React.FC = () => {
       const title = afterEffectsRef.querySelector(".game-title");
       const player = afterEffectsRef.querySelector(".player");
       if (titleContainer && startBtn && title && player) {
-        player.classList.add('animate-slide-in');
+        player.classList.add("animate-slide-in");
         setTimeout(() => {
           titleContainer.classList.add("animate-title");
           startBtn.classList.add("animate-slide-in-btn");

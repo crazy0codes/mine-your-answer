@@ -1,0 +1,78 @@
+{
+    "success": true,
+    "data": {
+        "topic": "Python Basics",
+        "questions": [
+            {
+                "correctOptionsIndex": 0,
+                "options": [
+                    "Guido van Rossum",
+                    "James Gosling",
+                    "Bjarne Stroustrup",
+                    "Dennis Ritchie"
+                ],
+                "question": "Who created the Python programming language?"
+            },
+            {
+                "correctOptionsIndex": 0,
+                "options": [
+                    ".py",
+                    ".js",
+                    ".java",
+                    ".cpp"
+                ],
+                "question": "What file extension is commonly used for Python files?"
+            },
+            {
+                "correctOptionsIndex": 0,
+                "options": [
+                    "def",
+                    "function",
+                    "func",
+                    "define"
+                ],
+                "question": "Which keyword is used to define a function in Python?"
+            },
+            {
+                "correctOptionsIndex": 0,
+                "options": [
+                    "string",
+                    "integer",
+                    "float",
+                    "boolean"
+                ],
+                "question": "What data type is used to represent a sequence of characters in Python?"
+            },
+            {
+                "correctOptionsIndex": 0,
+                "options": [
+                    "len()",
+                    "size()",
+                    "count()",
+                    "length()"
+                ],
+                "question": "Which built-in function is used to get the length of a list in Python?"
+            },
+            {
+                "correctOptionsIndex": 0,
+                "options": [
+                    "tuple",
+                    "list",
+                    "dictionary",
+                    "set"
+                ],
+                "question": "Which of the following is an immutable data type in Python?"
+            },
+            {
+                "correctOptionsIndex": 0,
+                "options": [
+                    "Python Enhancement Proposal",
+                    "Python Encrypted Protocol",
+                    "Programming Efficiency Plan",
+                    "Python Execution Process"
+                ],
+                "question": "What does PEP stand for in Python?"
+            }
+        ]
+    }
+}
